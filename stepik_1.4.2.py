@@ -7,15 +7,12 @@ soup = BeautifulSoup(page.text, 'html.parser')
 answer = 0
 for number in soup.find_all('td'):
     try:
-        #print(int(str(number).split('>')[1].split('<')[0]))
         answer += int(str(number).split('>')[1].split('<')[0])
     except:
         try:
-            #print(int(str(number).split('>')[2].split('<')[0]))
             answer += int(str(number).split('>')[2].split('<')[0])
         except:
             try:
-                #print(int(str(number).split('>')[3].split('<')[0]))
                 answer += int(str(number).split('>')[3].split('<')[0])
             except:
                 pass
